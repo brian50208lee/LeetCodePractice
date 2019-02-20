@@ -8,4 +8,17 @@ public class TreeNode {
     public TreeNode(int x) {
         val = x;
     }
+
+    @Override
+    public String toString() {
+        return val + "";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        return this.val == ((TreeNode) obj).val;
+    }
 }
