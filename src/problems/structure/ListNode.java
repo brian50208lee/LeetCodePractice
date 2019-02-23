@@ -6,12 +6,11 @@ public class ListNode {
 
     public ListNode(int x) {
         val = x;
+        next = null;
     }
 
     public String toString() {
-        if (this.next == null) {
-            return Integer.toString(this.val);
-        }
-        return Integer.toString(this.val) + ", " + this.next.toString();
+        String thisVal = val + "";
+        return next == null ? thisVal : thisVal + ", " + next.toString();
     }
 }

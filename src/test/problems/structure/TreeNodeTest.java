@@ -34,9 +34,10 @@ public class TreeNodeTest {
             TreeNode leftTree = queue.poll();
             TreeNode rightTree = queue.poll();
             if (leftTree != null) {
+                Assert.assertNotNull(rightTree);
                 Assert.assertEquals(leftTree.val, rightTree.val);
             } else {
-                Assert.assertEquals(null, rightTree);
+                Assert.assertNull(rightTree);
             }
             if (leftTree != null) {
                 queue.offer(leftTree.left);

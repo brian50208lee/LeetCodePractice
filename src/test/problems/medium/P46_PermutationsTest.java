@@ -30,9 +30,4 @@ public class P46_PermutationsTest {
     public void testPermutationsLoop() {
         Assert.assertEquals(expected.toString(), p46.permuteLoop(intput).toString());
     }
-
-    @Test
-    public void testPermutationsSwap() {
-        Assert.assertEquals(expected.toString(), p46.permuteSwap(intput).toString());
-    }
 }

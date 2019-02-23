@@ -29,9 +29,4 @@ public class P46_Permutations {
         }
         return results;
     }
-
-    // TODO note this
-    public List<List<Integer>> permuteSwap(int[] nums) {
-        return null;
-    }
 }

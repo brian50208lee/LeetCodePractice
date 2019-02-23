@@ -4,8 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import problems.structure.Interval;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class P56_MergeIntervalTest {
     @Test
@@ -24,9 +23,18 @@ public class P56_MergeIntervalTest {
         expected.add(new Interval(15,18));
 
         //when
+        List<Interval> results = p56.merge(interval);
 
         //then
-        Assert.assertEquals(expected, p56.merge(interval));
+        Set<String> expectedSet = new HashSet<>();
+        for (Interval i : expected) {
+            expectedSet.add(i.toString());
+        }
+        Set<String> actualSet = new HashSet<>();
+        for (Interval i : results) {
+            actualSet.add(i.toString());
+        }
+        Assert.assertEquals(expectedSet.toString(), actualSet.toString());
     }
 
     @Test
@@ -41,9 +49,18 @@ public class P56_MergeIntervalTest {
         expected.add(new Interval(1,5));
 
         //when
+        List<Interval> results = p56.merge(interval);
 
         //then
-        Assert.assertEquals(expected, p56.merge(interval));
+        Set<String> expectedSet = new HashSet<>();
+        for (Interval i : expected) {
+            expectedSet.add(i.toString());
+        }
+        Set<String> actualSet = new HashSet<>();
+        for (Interval i : results) {
+            actualSet.add(i.toString());
+        }
+        Assert.assertEquals(expectedSet.toString(), actualSet.toString());
     }
 
     @Test
@@ -61,9 +78,18 @@ public class P56_MergeIntervalTest {
         expected.add(new Interval(1,10));
 
         //when
+        List<Interval> results = p56.merge(interval);
 
         //then
-        Assert.assertEquals(expected, p56.merge(interval));
+        Set<String> expectedSet = new HashSet<>();
+        for (Interval i : expected) {
+            expectedSet.add(i.toString());
+        }
+        Set<String> actualSet = new HashSet<>();
+        for (Interval i : results) {
+            actualSet.add(i.toString());
+        }
+        Assert.assertEquals(expectedSet.toString(), actualSet.toString());
     }
 
 }

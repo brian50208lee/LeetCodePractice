@@ -3,8 +3,6 @@ package problems.structure;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class ListNodeTest {
 
     @Test
@@ -35,14 +33,11 @@ public class ListNodeTest {
     }
 
     public static void assertLinkedListEquals(ListNode expected, ListNode actual) {
-        Assert.assertNotNull(expected);
-        Assert.assertNotNull(actual);
-        while (expected != null && actual != null) {
-            Assert.assertEquals(expected.val, actual.val);
-            expected = expected.next;
-            actual = actual.next;
+        if (expected == null) {
+            Assert.assertNull(actual);
+        } else {
+            Assert.assertNotNull(actual);
+            Assert.assertEquals(expected.toString(), actual.toString());
         }
-        Assert.assertNull(expected);
-        Assert.assertNull(actual);
     }
 }
